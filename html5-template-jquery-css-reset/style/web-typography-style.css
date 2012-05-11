@@ -1,0 +1,26 @@
+/*
+Many ideas are from: http://webtypography.net/
+
+ * single column: 66-character / line (counting both letters and spaces)
+ * multiple columns: 40 to 50 characters / line
+*/
+
+/* Continue with: http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ */
+
+body {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px; }
+P {
+  word-spacing:0.25em;
+  line-height: 1.25; /* 12 x 1.25 = 15 px line height */
+  margin-top: 1.25em;
+  margin-bottom: 1.25em; }
+H1 {
+	font-size: 200%;
+	word-spacing:-0.125em; 
+	line-height: 0.42em;
+	margin-top: 0.42em;
+	margin-bottom: 0.42em; }
+ABBR {
+	letter-spacing:0.1em; }
+

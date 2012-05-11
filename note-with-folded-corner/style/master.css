@@ -1,0 +1,27 @@
+body {
+	background-color: #8ae234;
+	padding: 30px;
+}
+
+.left-column {
+	width: 250px;
+}
+
+.folded-note h1 {
+	margin-bottom: 0.1em;
+}
+
+.folded-note {
+	background-image:url('../corner.png');
+	background-position: right top;
+	background-repeat: no-repeat;
+	padding-top: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.folded-note .inner {
+	background-color: white;
+	padding: 15px;
+	padding-top: 0;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head runat="server">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<style>
+		body {
+			font-family:Helvetica,Arial,Verdana,Sans-serif;
+			font-size:12px;
+		}
+		.button a { 
+			cursor: pointer;
+			padding: 2px 10px; 
+			color: white;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		.button a.add { 
+			background-color: green; 
+		}
+		.button a.remove { 
+			background-color: red; 
+		}
+		/* To toggle the add / remove button */
+		.button.chosen .add { display:none; }
+		.button .remove { display:none; }
+		.button.chosen .remove { display:inline; }
+	</style>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.button').click(function() {
+				$('.button').toggleClass('chosen');
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Button: display:inline / display:none</h1>
+	<ul>
+		<li>Toggle a CSS class to mark the button selected with jQuery</li>
+		<li>Hide, and unhide the add / remove classes with display:inline, display:none</li>
+		<li>If CSS / JavaScript is disabled both Add and Remove is visible. I think that's ok since it both adds and removes.</li>
+	</ul>
+	<h2>Demo</h2>
+	<div class="button">
+		<a href="#Add" class="add">Add</a>
+		<a href="#Remove" class="remove">Remove</a>
+	</div>
+	<h2>Demo, no JS/CSS</h2>
+	<div class="buttonNoJS">
+		<a href="#Add" class="add">Add</a>
+		<a href="#Remove" class="remove">Remove</a>
+	</div>
+</body>
+</html>

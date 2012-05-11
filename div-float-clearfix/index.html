@@ -1,0 +1,73 @@
+<!doctype html> 
+<html> 
+<head> 
+  <title>Clearfix - Clear floats as described on page 106 in Handcrafted CSS by Dan Cederholm</title> 
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<style>
+    body {
+      font-family: verdana, arial, helvetica, sans-serif;
+      font-size: 12px;
+    }
+    .box {
+      border: 5px solid red;
+      width: 400px;
+    }
+    .description {
+      float: right;
+      width: 290px;
+    }
+	
+    .group:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+    * html .group { /* for IE6 */
+      height: 1%;
+    }
+    *:first-child+html .group { /* for IE7 */
+      min-height: 1px;
+    }
+	</style>
+</head> 
+<body> 
+  <h1>Robust way to clear floats</h1>
+  <ul>
+    <li>(Very) inspired by page 106 in Handcrafted CSS by Dan Cederholm</li>
+    <li>Works in IE6/7</li>
+    <li>Add the class <strong>group</strong> to the outer div</li>
+  </ul>
+  
+  <h2>CSS</h2>
+  <pre>
+  .group:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+    * html .group { /* for IE6 */
+      height: 1%;
+    }
+    *:first-child+html .group { /* for IE7 */
+      min-height: 1px;
+    }
+  </pre>
+  
+  <h2>Demo - The fix</h2>
+  <div class="box group">
+    <img src="swedishchars.png" alt="Swedish chars" />
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis, dolor vel suscipit vestibulum, nisi nulla tempor felis, at blandit quam orci vel ante. Nulla tempor lectus a nibh gravida pulvinar. Nullam non eros sed odio ultricies bibendum. Integer a turpis in mauris faucibus blandit. Praesent vitae est lectus. Proin viverra dictum vehicula. Curabitur sed facilisis dui. Integer in diam tristique est fermentum condimentum ut et leo. Vestibulum sit amet ipsum dui. Maecenas ut tellus dui.</p>
+  </div>
+  
+  <h2>Demo - Shows the problem</h2>
+  <div class="box">
+    <img src="swedishchars.png" alt="Swedish chars" />
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis, dolor vel suscipit vestibulum, nisi nulla tempor felis, at blandit quam orci vel ante. Nulla tempor lectus a nibh gravida pulvinar. Nullam non eros sed odio ultricies bibendum. Integer a turpis in mauris faucibus blandit. Praesent vitae est lectus. Proin viverra dictum vehicula. Curabitur sed facilisis dui. Integer in diam tristique est fermentum condimentum ut et leo. Vestibulum sit amet ipsum dui. Maecenas ut tellus dui.</p>
+  </div>
+  
+</body>
+</html>

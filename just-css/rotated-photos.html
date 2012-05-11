@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+<title>Just-CSS: Rotated photos</title>
+<style>
+body {
+	padding: 200px;
+	background-color: #ddd;	
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+	float: left;
+}
+
+ul li img {
+	border: 20px solid white;
+	-webkit-box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+	-webkit-transition: all 0.5s;
+	margin: -150px;
+	position: relative;
+}
+
+ul li img:hover {
+	-webkit-transform: rotate(0deg);
+	-webkit-box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+	z-index: 100;
+}
+
+.rotate5deg img {
+	-webkit-transform: rotate(5deg) scale(0.5);
+	-moz-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	transform: rotate(5deg);
+}
+.rotate10deg img {
+	-webkit-transform: rotate(10deg) scale(0.5);
+	-moz-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	transform: rotate(10deg);
+}
+.rotate15deg img {
+	-webkit-transform: rotate(15deg) scale(0.5);
+	-moz-transform: rotate(15deg);
+	-o-transform: rotate(15deg);
+	transform: rotate(1deg);
+}
+.rotate355deg img {
+	-webkit-transform: rotate(355deg) scale(0.5);
+	-moz-transform: rotate(355deg);
+	-o-transform: rotate(355deg);
+	transform: rotate(355deg);
+}
+.rotate350deg img {
+	-webkit-transform: rotate(350deg) scale(0.5);
+	-moz-transform: rotate(350deg);
+	-o-transform: rotate(350deg);
+	transform: rotate(350deg);
+}
+.rotate345deg img {
+	-webkit-transform: rotate(345deg) scale(0.5);
+	-moz-transform: rotate(345deg);
+	-o-transform: rotate(345deg);
+	transform: rotate(345deg);
+}
+</style>
+
+</head>
+<body>
+<h1>Just-CSS: Rotated images in photo gallery</h1>
+<p>The idea was to create a more alive photo gallery by rotating the images. In pure CSS of course</p>
+<ul>
+	<li class="rotate10deg"><img src="http://placekitten.com/g/400/400"></li>
+	<li class="rotate355deg"><img src="http://placekitten.com/g/400/400"></li>
+	<li class="rotate5deg"><img src="http://placekitten.com/g/400/400"></li>
+	<li class="rotate15deg"><img src="http://placekitten.com/g/400/400"></li>
+	<li class="rotate345deg"><img src="http://placekitten.com/g/400/400"></li>
+	<li class="rotate355deg"><img src="http://placekitten.com/g/400/400"></li>
+	<li class="rotate10deg"><img src="http://placekitten.com/g/400/400"></li>
+	<li class="rotate5deg"><img src="http://placekitten.com/g/400/400"></li>
+	<li class="rotate345deg"><img src="http://placekitten.com/g/400/400"></li>
+</ul>
+
+</body>
+</html>

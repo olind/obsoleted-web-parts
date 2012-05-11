@@ -1,0 +1,7 @@
+.column {
+	width: 400px;
+	background-color: #ccc; }
+.column img {
+    height:auto;
+    max-width:100%;
+    overflow:hidden; }

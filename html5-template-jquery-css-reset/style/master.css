@@ -1,0 +1,11 @@
+.left {
+	float: left; }
+.right {
+	float: right; }
+/* To get the line height correct for images to match the text I'll try to add the margin / paddings dynamically */
+/*p img.left {
+	margin-right: 5px;
+}
+p img.right {
+	margin-left: 5px;
+}*/

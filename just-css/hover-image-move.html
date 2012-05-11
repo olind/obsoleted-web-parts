@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<title>Just-CSS: Rotate stacked images on hover</title>
+
+<style>
+body {
+	padding: 10px 50px;
+	background-color: black;
+	color: white;}
+ul {
+	margin: 0;
+	padding: 0;}
+ul li {
+	list-style: none;
+	position: absolute;
+	float: left;}
+
+ul.img-stack img { -webkit-transition: all 0.3s; }
+ul.img-stack:hover img.blue { -webkit-transform: rotate(-5deg) translate(-20%, 0); }
+ul.img-stack:hover img.red { -webkit-transform: rotate(5deg) translate(20%, 0); }
+
+img { 
+	border: 4px solid white; 
+	width: 100px;
+	height: 100px;}
+
+/* TODO: Remove this hack */
+ul.second {
+	position: absolute;
+	left: 200px;}
+ul.third {
+	position: absolute;
+	left: 340px;}
+</style>
+
+</head>
+<body>
+<h1>Just-CSS: Rotate stacked images on hover</h1>
+<p>Stack 3 images on top of each other. Rotate 1 to the left and 1 to the right when hovering. Much like the animated photos in <i>Google+</i>. In just CSS.</p>
+<p>I have one issue left to solve. Removing the need to position each ul +150px from the one before. Instead I would like to have them float normal.</p>
+<p>I have only added the css3 code for chrome</p>
+
+<ul class="img-stack first">
+	<li><img class="red" src="http://placekitten.com/g/100/100"></li>
+	<li><img class="green" src="http://placekitten.com/g/100/100"></li>
+	<li><img class="blue" src="http://placekitten.com/g/100/100"></li>
+</ul>
+
+<ul class="img-stack second">
+	<li><img class="red" src="http://placekitten.com/g/100/100"></li>
+	<li><img class="green" src="http://placekitten.com/g/100/100"></li>
+	<li><img class="blue" src="http://placekitten.com/g/100/100"></li>
+</ul>
+
+<ul class="img-stack third">
+	<li><img class="red" src="http://placekitten.com/g/100/100"></li>
+	<li><img class="green" src="http://placekitten.com/g/100/100"></li>
+	<li><img class="blue" src="http://placekitten.com/g/100/100"></li>
+</ul>
+
+</body>
+</html>
